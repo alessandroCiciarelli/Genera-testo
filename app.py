@@ -15,8 +15,7 @@ ai = aitextgen()
 def ai_text(inp,lunghezza, temp):
 	generated_text = ai.generate_one(max_length = lunghezza, prompt = inp, no_repeat_ngram_size = 3 , temperature = temp) #repetition_penalty = 1.9)
   #print(type(generated_text))
-	b = re.sub(r"[^a-zA-Z0-9]+.+,", ' ', generated_text)
-	return entoit(b)
+	return generated_text
 
 def ittoen(testo):
 	return translatoren.translate(testo)
@@ -70,7 +69,7 @@ def main():
 		nuovo = ittoen(inp)
 		with st.spinner('Aspetta mentre la rete si allena...'):
 			inp = ai_text(nuovo,lunghezza,follia)
-		st.text_area('Testo generato', inp, height=400)
+		st.text_area('Testo generato', entoit(inp), height=400)
 
 		saluti()
 	

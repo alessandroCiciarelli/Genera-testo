@@ -6,8 +6,6 @@ import re
 from aitextgen import aitextgen
 from deep_translator import GoogleTranslator
 
-translatorIt= Translator(from_lang="english",to_lang="italian")
-translatoren= Translator(from_lang="italian",to_lang="english")
 
 
 

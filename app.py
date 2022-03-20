@@ -9,9 +9,10 @@ from deep_translator import GoogleTranslator
 
 
 
-ai = aitextgen()
+
 
 def ai_text(inp,lunghezza, temp):
+	ai = aitextgen()
 	generated_text = ai.generate_one(max_length = lunghezza, prompt = inp, no_repeat_ngram_size = 3 , temperature = temp) #repetition_penalty = 1.9)
   #print(type(generated_text))
 	return generated_text

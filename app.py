@@ -4,9 +4,9 @@ import streamlit as st
 import re
 import googletrans
 from aitextgen import aitextgen
-from googletrans import Translator
-translator = Translator()
-
+from translate import Translator
+translatorIt= Translator(from_lang="english",to_lang="italian")
+translatoren= Translator(from_lang="italian",to_lang="english")
 
 
 
@@ -19,10 +19,10 @@ def ai_text(inp,lunghezza, temp):
 	return entoit(b)
 
 def ittoen(testo):
-	return translator.translate(testo, src='it', dest='en')
+	return translatoren.translate(testo)
 
 def entoit(testo):
-	return translator.translate(testo, src='en', dest='it')
+	return translatorIt.translate(testo)
 
 
 def saluti():

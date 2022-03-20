@@ -69,7 +69,7 @@ def main():
 	if st.button("Genera testo") :
 		nuovo = ittoen(inp)
 		with st.spinner('Aspetta mentre la rete si allena...'):
-			inp = ai_text(nuovo)
+			inp = ai_text(nuovo,lunghezza,follia)
 		st.text_area('Testo generato', inp, height=400)
 
 		saluti()

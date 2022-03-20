@@ -60,7 +60,7 @@ def main():
 
 	col1, col2 = st.columns(2)		
 	with col1:
-		lunghezza = st.slider('Lunghezza massima del testo generato :', 50, 1500,200,10)
+		lunghezza = st.slider('Lunghezza massima del testo generato :', 50, 500,200,10)
 	with col2:
 		follia = st.slider('Controlla la "follia" del testo  :', 0.1, 1.1,0.7,0.1)
 

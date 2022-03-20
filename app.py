@@ -2,7 +2,7 @@
 import streamlit as st
 
 import re
-import googletrans
+
 from aitextgen import aitextgen
 from translate import Translator
 translatorIt= Translator(from_lang="english",to_lang="italian")

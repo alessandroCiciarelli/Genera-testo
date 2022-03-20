@@ -49,7 +49,7 @@ hide_st_style = """
             header {visibility: hidden;}
             </style>
             """
-#st.markdown(hide_st_style, unsafe_allow_html=True)
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.subheader("GeneraTesti, Articoli o Slogan con la nostra rete Neurale !")
 
@@ -57,7 +57,7 @@ st.subheader("GeneraTesti, Articoli o Slogan con la nostra rete Neurale !")
 
 def main():
 
-	inp = st.text_area('Scrivi una frase o un paragrafo di ispirazione per la nostra I.A.', 'Software')
+	inp = st.text_area('Scrivi una frase o un paragrafo di ispirazione per la nostra I.A.')
 
 	col1, col2 = st.columns(2)		
 	with col1:
@@ -67,9 +67,9 @@ def main():
 
 	
 	if st.button("Genera testo") :
-		inp = ittoen(inp)
+		nuovo = ittoen(inp)
 		with st.spinner('Aspetta mentre la rete si allena...'):
-			inp = ai_text(inp)
+			inp = ai_text(nuovo)
 		st.text_area('Testo generato', inp, height=400)
 
 		saluti()
